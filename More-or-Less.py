@@ -30,6 +30,11 @@ print ("\t\tGame of More or Less\t\t")
 print ("\t\tThe Rules: Chosen numbers between 1 and 100\t\t")
 print ("\t\tYou only have 5 chances \t\t")
 
+
+def rewind():
+    return game()
+
+
 while choice != mistery:
 
     try:
@@ -63,9 +68,9 @@ while choice != mistery:
         choice2 = int(raw_input())
 
         if choice2 == "-1":
-            def rewind():
-                return game()
+            rewind()
 
         for x in xrange(1, 101):
             if choice2 == x:
                 raise SystemExit
+                
